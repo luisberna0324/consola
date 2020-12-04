@@ -10,7 +10,7 @@ import java.io.Serializable;
  * @author Gerencia TIC
  */
 @Entity
-@Table(name = "reg_novedades")
+@Table( name = "reg_novedades")
 @NamedQueries({
     @NamedQuery(name = "RegNovedades.findAll", query = "SELECT rn FROM RegNovedades rn"),
     @NamedQuery(name = "RegNovedades.findLstEvidencias", query = "SELECT rn.regEvidencia FROM RegNovedades rn WHERE  rn.fkPreRevision= :fkPreRevision")

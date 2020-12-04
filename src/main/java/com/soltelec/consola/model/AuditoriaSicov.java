@@ -9,7 +9,7 @@ import java.util.Date;
  * @author Gerencia Desarrollo de Soluciones Tecnologicas
  */
 @Entity
-@Table(name = "auditoria_sicov")
+@Table( name = "auditoria_sicov")
 @NamedQueries({
     @NamedQuery(name = "AuditoriaSicov.findAll", query = "SELECT a FROM AuditoriaSicov a"),
     @NamedQuery(name = "AuditoriaSicov.ExitTrama", query = "SELECT count(a.idRevision) FROM AuditoriaSicov a WHERE a.idRevision= :idHp "),

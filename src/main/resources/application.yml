@@ -5,21 +5,22 @@ spring:
     generate-ddl: true
   datasource-postgres:
     driver-class-name: org.postgresql.Driver
-    jdbc-url: jdbc:postgresql://localhost:5432/db_cda
+    jdbc-url: jdbc:postgresql://192.168.1.10:5432/db_cda?currentSchema=rtm
     username: 'postgres'
-    password: 'postgres'
+    password: '50lt3l3c'
     platform: postgresql
     hikari:
       idle-timeout: 10000
       maximum-pool-size: 10
       minimum-idle: 5
       pool-name: ReadHikariPool
+    schema: rtm
 
   datasource-mysql:
     driverClassName: com.mysql.cj.jdbc.Driver
-    jdbc-url: jdbc:mysql://localhost:3306/db_cda?nullCatalogMeansCurrent=false
+    jdbc-url: jdbc:mysql://192.168.1.10:3306/db_cda?nullCatalogMeansCurrent=false
     username: 'root'
-    password: 'root'
+    password: '50lt3l3c545'
     hikari:
       idle-timeout: 10000
       maximum-pool-size: 10

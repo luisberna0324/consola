@@ -14,7 +14,7 @@ import java.util.List;
 * @author Gerencia Desarrollo de Soluciones Tecnologicas
 */
 @Entity
-@Table(name = "departamentos")
+@Table( name = "departamentos")
 @NamedQueries({
     @NamedQuery(name = "Departamento.findAll", query = "SELECT d FROM Departamento d order by d.nombre"),
     @NamedQuery(name = "Departamento.findByIdDepartamento", query = "SELECT d FROM Departamento d WHERE d.id = :idDepartamento"),

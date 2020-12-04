@@ -13,7 +13,7 @@ import java.io.Serializable;
 * @author Gerencia Desarrollo de Soluciones Tecnologicas
 */
 @Entity
-@Table(name = "grupos_sub_grupos")
+@Table( name = "grupos_sub_grupos")
 @NamedQueries({
     @NamedQuery(name = "GruposSubGrupos.findAll", query = "SELECT g FROM GruposSubGrupos g")})
 public class GruposSubGrupos implements Serializable {

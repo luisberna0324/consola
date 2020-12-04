@@ -14,7 +14,7 @@ import java.util.List;
  * @author Gerencia TIC
  */
 @Entity
-@Table(name = "usuarios" )
+@Table( name = "usuarios" )
 @NamedQueries({ @NamedQuery(name = "Usuario.findAll", query = "SELECT u FROM UsuarioMySql u"),
 		@NamedQuery(name = "Usuario.findByNickusuario", query = "SELECT u FROM UsuarioMySql u WHERE u.nick = :nickusuario"),
 		@NamedQuery(name = "UsuarioMySql.findByCedula", query = "SELECT u FROM UsuarioMySql u WHERE u.cedula = :cedula"),
@@ -42,7 +42,6 @@ public class UsuarioMySql implements Serializable {
 	private String administrador;
 	@Column(name = "contrasenia")
 	private String contrasena;
-	@Basic(optional = false)
 	@Column(name = "Fecha_validacion")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fechaValidacion;

@@ -13,7 +13,7 @@ import java.io.Serializable;
 * @author Gerencia Desarrollo de Soluciones Tecnologicas
 */
 @Entity
-@Table(name = "ubicacion_recurso")
+@Table( name = "ubicacion_recurso")
 @NamedQueries({
     @NamedQuery(name = "UbicacionRecursos.findAll", query = "SELECT ub FROM UbicacionRecursos ub") })
 public class UbicacionRecursos implements Serializable {

@@ -17,7 +17,7 @@ import java.util.Date;
 * @author Gerencia Desarrollo de Soluciones Tecnologicas
 */
 @Entity
-@Table(name = "calibraciones" )
+@Table( name = "calibraciones" )
 public class Calibracion implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id

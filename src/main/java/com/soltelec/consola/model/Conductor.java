@@ -18,7 +18,7 @@ import java.util.List;
 @NamedQueries({
     @NamedQuery(name = "Conductor.findByIdentificacion", query = "SELECT c FROM Conductor  c WHERE c.id = :identificacion")
 })
-@Table(name = "conductor")
+@Table( name = "conductor")
 public class Conductor implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id

@@ -13,7 +13,7 @@ import java.io.Serializable;
 * @author Gerencia Desarrollo de Soluciones Tecnologicas
 */
 @Entity
-@Table(name = "colores")
+@Table( name = "colores")
 @NamedQueries({
     @NamedQuery(name = "Color.findAll", query = "SELECT c FROM Color c"),
     @NamedQuery(name = "Color.findByColor", query = "SELECT c FROM Color c WHERE c.id = :id"),

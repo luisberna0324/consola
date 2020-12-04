@@ -14,7 +14,7 @@ import java.util.List;
 * @author Gerencia Desarrollo de Soluciones Tecnologicas
 */
 @Entity
-@Table(name = "tipo_aborto")
+@Table( name = "tipo_aborto")
 @NamedQueries({
     @NamedQuery(name = "TipoAborto.findAll", query = "SELECT t FROM TipoAborto t")})
 public class TipoAborto implements Serializable {

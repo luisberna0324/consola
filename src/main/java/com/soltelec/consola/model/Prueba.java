@@ -15,7 +15,7 @@ import java.util.List;
   order by pruebas.Id_Pruebas ,pruebas.Fecha_final  desc 
 */
 @Entity
-@Table(name = "pruebas")
+@Table( name = "pruebas")
 @NamedQueries({
 	@NamedQuery(name = "Pruebas.findByFechasAndTypo", query = "SELECT p FROM Prueba p  WHERE  p.fecha BETWEEN :fechaInicial and :fechaFinal and p.abortado='N' and p.finalizada='Y' and p.tipoPrueba.id = :tipoPrueba "),
 	@NamedQuery(name = "Pruebas.findByPruebaByTipo", query = "SELECT p FROM Prueba p  WHERE   p.id = :idPrueba  and p.tipoPrueba.id = :tipoPrueba ")

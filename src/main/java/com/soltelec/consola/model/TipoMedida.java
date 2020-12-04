@@ -14,7 +14,7 @@ import java.util.List;
 * @author Gerencia Desarrollo de Soluciones Tecnologicas
 */
 @Entity
-@Table(name = "tipos_medida")
+@Table( name = "tipos_medida")
 @NamedQueries({
     @NamedQuery(name = "TipoMedida.findAll", query = "SELECT t FROM TipoMedida t"),
     @NamedQuery(name = "TipoMedida.findByMeasuretype", query = "SELECT t FROM TipoMedida t WHERE t.id = :measuretype"),

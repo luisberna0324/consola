@@ -13,7 +13,7 @@ import java.io.Serializable;
  * @author GerenciaDesarrollo
  */
 @Entity
-@Table(name = "permissions")
+@Table( name = "permissions")
 @NamedQueries({
     @NamedQuery(name = "Permissions.findAll", query = "SELECT p FROM Permissions p")})
 public class Permissions implements Serializable {

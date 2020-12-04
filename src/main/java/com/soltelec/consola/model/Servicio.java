@@ -18,7 +18,7 @@ import java.io.Serializable;
  * @author GerenciaDesarrollo
  */
 @Entity
-@Table(name = "servicios")
+@Table( name = "servicios")
 @NamedQueries({
     @NamedQuery(name = "Servicio.findAll", query = "SELECT s FROM Servicio s"),
     @NamedQuery(name = "Servicio.findByService", query = "SELECT s FROM Servicio s WHERE s.id = :service"),

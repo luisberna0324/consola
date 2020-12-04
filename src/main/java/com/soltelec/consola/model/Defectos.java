@@ -14,7 +14,7 @@ import java.util.List;
 * @author Gerencia Desarrollo de Soluciones Tecnologicas
 */
 @Entity
-@Table(name = "defectos")
+@Table( name = "defectos")
 @NamedQueries({
 	 @NamedQuery(name = "Defectos.findByCtxSensorial", query = "SELECT d FROM  Defectos d WHERE d.tipoVehiculo = :tipoVehiculo and d.particionVehiculo= :particionVehiculo and d.tipoMiga= :tipoMiga order by d.secuenciaVista"),
     @NamedQuery(name = "Defectos.findAll", query = "SELECT d FROM Defectos d")})

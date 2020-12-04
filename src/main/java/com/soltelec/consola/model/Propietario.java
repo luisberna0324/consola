@@ -18,7 +18,7 @@ import java.util.List;
 @NamedQueries({
     @NamedQuery(name = "Propietarios.findByIdentificacion", query = "SELECT p FROM Propietario p WHERE p.id = :identificacion")
 })
-@Table(name = "propietarios")
+@Table( name = "propietarios")
 public class Propietario implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id

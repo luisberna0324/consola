@@ -13,7 +13,7 @@ import java.io.Serializable;
 * @author Gerencia Desarrollo de Soluciones Tecnologicas
 */
 @Entity
-@Table(name = "cda")
+@Table( name = "cda")
 public class Cda implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id

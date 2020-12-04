@@ -9,7 +9,7 @@ import java.util.Date;
  * @author Gerencia TIC
  */
 @Entity
-@Table(name = "recepcion")
+@Table( name = "recepcion")
 @NamedQueries({
     @NamedQuery(name = "Recepcion.findAll", query = "SELECT r FROM Recepcion r")})
 public class Recepcion implements Serializable {

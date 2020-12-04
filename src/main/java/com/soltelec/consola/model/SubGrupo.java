@@ -14,7 +14,7 @@ import java.util.List;
 * @author Gerencia Desarrollo de Soluciones Tecnologicas
 */
 @Entity
-@Table(name = "sub_grupos")
+@Table( name = "sub_grupos")
 @NamedQueries({
     @NamedQuery(name = "SubGrupo.findAll", query = "SELECT s FROM SubGrupo s"),
     @NamedQuery(name = "SubGrupo.findByScdefgroupsub", query = "SELECT s FROM SubGrupo s WHERE s.id = :scdefgroupsub"),

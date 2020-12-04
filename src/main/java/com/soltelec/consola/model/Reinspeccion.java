@@ -15,7 +15,7 @@ import java.util.List;
 */
 
 @Entity
-@Table(name="reinspecciones")
+@Table( name="reinspecciones")
 @NamedQueries({ @NamedQuery(name="Reinspeccion.findAll", query="SELECT r FROM Reinspeccion r"),
                 @NamedQuery(name="Reinspeccion.findByHojaPrueba",query = "SELECT r FROM Reinspeccion r WHERE r.hojaPruebas =:hojaPruebas" ),
                 @NamedQuery(name = "Reinspeccion.findByFechaSiguiente", query = "SELECT r FROM Reinspeccion r WHERE r.fechaSiguiente between :fechainicial and :fechafinal")

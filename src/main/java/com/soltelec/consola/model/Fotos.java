@@ -13,7 +13,7 @@ import java.io.Serializable;
 * @author Gerencia Desarrollo de Soluciones Tecnologicas
 */
 @Entity
-@Table(name = "fotos")
+@Table( name = "fotos")
 @NamedQueries({
     @NamedQuery(name = "Fotos.findAll", query = "SELECT f FROM Fotos f"),
     @NamedQuery(name = "Fotos.ctxNroFoto", query = "SELECT f.numeroRevision FROM Fotos f  WHERE f.idHojaPruebasFor.id = :ctxHP ")})

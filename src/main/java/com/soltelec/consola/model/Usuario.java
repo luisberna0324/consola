@@ -14,7 +14,7 @@ import java.io.Serializable;
  * @author Gerencia TIC
  */
 @Entity
-@Table(name = "usuarios")
+@Table( name = "usuarios")
 @NamedQueries({
 		@NamedQuery(name = "Usuarios.findByNickusuario", query = "SELECT u FROM Usuario u WHERE u.nick = :nickusuario"),
 		@NamedQuery(name = "Usuarios.findUsuario", query = "SELECT u FROM Usuario u WHERE u.cedula = :cedula"),

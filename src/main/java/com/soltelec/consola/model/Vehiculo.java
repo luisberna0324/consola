@@ -15,7 +15,7 @@ import java.util.List;
  */
 @Entity
 
-@Table(name = "vehiculos")
+@Table( name = "vehiculos")
 @NamedQueries({ @NamedQuery(name = "Vehiculo.findAll", query = "SELECT v FROM Vehiculo v"),
 		@NamedQuery(name = "Vehiculo.findByCar", query = "SELECT v FROM Vehiculo v WHERE v.id = :idVehiculo"),
 		@NamedQuery(name = "Vehiculo.findByCarplate", query = "SELECT v FROM Vehiculo v WHERE v.placa = :placa"),

@@ -13,7 +13,7 @@ import java.io.Serializable;
 * @author Gerencia Desarrollo de Soluciones Tecnologicas
 */
 @Entity
-@Table(name = "medidas")
+@Table( name = "medidas")
 @NamedQueries({
     @NamedQuery(name = "Medida.findAll", query = "SELECT m FROM Medida m"),
     @NamedQuery(name = "Medida.findByMeasure", query = "SELECT m FROM Medida m WHERE m.id = :id"),

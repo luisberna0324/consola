@@ -14,7 +14,7 @@ import java.util.List;
  * @author Gerencia Desarrollo de Soluciones Tecnologicas
  */
 @Entity
-@Table(schema = "rtm", name = "aseguradoras" )
+@Table( name = "aseguradoras" )
 @NamedQueries({
     @NamedQuery(name = "Aseguradora.findByNombre", query = "SELECT a FROM Aseguradora a WHERE a.nombre = :nombre"),
     @NamedQuery(name = "Aseguradora.findByDescAseguradora", query = "SELECT a FROM Aseguradora a  WHERE a.nombre LIKE :descAseguradora order by a.nombre "),

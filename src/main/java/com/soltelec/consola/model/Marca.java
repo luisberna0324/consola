@@ -14,7 +14,7 @@ import java.util.List;
 * @author Gerencia Desarrollo de Soluciones Tecnologicas
 */
 @Entity
-@Table(name = "marcas")
+@Table( name = "marcas")
 @NamedQueries({
     @NamedQuery(name = "Marca.findAll", query = "SELECT m FROM Marca m"),
     @NamedQuery(name = "Marca.findByCarmark", query = "SELECT m FROM Marca m WHERE m.id = :id"),

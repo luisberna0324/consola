@@ -13,7 +13,7 @@ import java.io.Serializable;
 * @author Gerencia Desarrollo de Soluciones Tecnologicas
 */
 @Entity
-@Table(name = "tipos_gasolina")
+@Table( name = "tipos_gasolina")
 @NamedQueries({
     @NamedQuery(name = "TipoGasolina.findAll", query = "SELECT t FROM TipoGasolina t"),
     @NamedQuery(name = "TipoGasolina.findByFueltype", query = "SELECT t FROM TipoGasolina t WHERE t.id = :fueltype"),

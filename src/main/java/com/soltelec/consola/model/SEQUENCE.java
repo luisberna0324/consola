@@ -13,7 +13,7 @@ import java.io.Serializable;
  * @author GerenciaDesarrollo
  */
 @Entity
-@Table(name = "sequence")
+@Table( name = "sequence")
 @NamedQueries({
     @NamedQuery(name = "sequence.findAll", query = "SELECT a FROM SEQUENCE a")})
 public class SEQUENCE implements Serializable {

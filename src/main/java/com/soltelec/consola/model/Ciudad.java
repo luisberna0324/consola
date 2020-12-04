@@ -13,7 +13,7 @@ import java.io.Serializable;
 * @author Gerencia Desarrollo de Soluciones Tecnologicas
 */
 @Entity
-@Table(name="ciudades")
+@Table( name="ciudades")
 @NamedQueries({ @NamedQuery(name = "Ciudad.findByIdDepartamento", query = "SELECT c FROM Ciudad c JOIN c.departamento d WHERE c.departamento.id = :idDepartamento order by c.nombre")})
 public class Ciudad implements Serializable {
 	

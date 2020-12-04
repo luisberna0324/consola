@@ -14,7 +14,7 @@ import java.util.List;
  * @author Gerencia Desarrollo de Soluciones Tecnologicas
  */
 @Entity
-@Table(name = "hoja_pruebas")
+@Table( name = "hoja_pruebas")
 
 @NamedQueries({
 		@NamedQuery(name = "HojaPruebas.findByFechas", query = "SELECT h FROM HojaPruebas h WHERE h.fechaIngreso BETWEEN :fechaInicial and :fechaFinal"),

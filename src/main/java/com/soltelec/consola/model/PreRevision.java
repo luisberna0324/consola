@@ -11,7 +11,7 @@ import java.util.Date;
  * @author Gerencia TIC
  */
 @Entity
-@Table(name = "pre_revision")
+@Table( name = "pre_revision")
 @NamedQueries({ @NamedQuery(name = "PreRevision.findAll", query = "SELECT p FROM PreRevision p"),
 		@NamedQuery(name = "PreRevision.findFollowingTurno", query = "SELECT Max(pr.noTurno) FROM  PreRevision pr  where pr.categoria = :ctxCategoria and  pr.fecha = :fecha"),
 		@NamedQuery(name = "PreRevision.findCountOrdenPrep", query = "SELECT count(p.noRevision) FROM PreRevision p where p.fecha = :fecha and p.culminado =7"),

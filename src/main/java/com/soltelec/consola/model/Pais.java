@@ -12,7 +12,7 @@ import java.io.Serializable;
 * @author Gerencia Desarrollo de Soluciones Tecnologicas
 */
 @Entity
-@Table(name = "pais")
+@Table( name = "pais")
 @NamedQueries({
     @NamedQuery(name = "Pais.findAll", query = "SELECT p FROM Pais p"),
     @NamedQuery(name = "Pais.findByCodigo", query = "SELECT p FROM Pais p WHERE p.id = :codigo"),

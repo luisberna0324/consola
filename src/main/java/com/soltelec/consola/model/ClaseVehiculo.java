@@ -13,7 +13,7 @@ import java.io.Serializable;
 * @author GerenciaDesarrollo
 */
 @Entity
-@Table(name = "clases_vehiculo")
+@Table( name = "clases_vehiculo")
 @NamedQueries({
     @NamedQuery(name = "ClaseVehiculo.findByClasesActivas", query = "SELECT c FROM ClaseVehiculo c WHERE c.activo = 1 order by c.id")})
 public class ClaseVehiculo implements Serializable {

@@ -14,7 +14,7 @@ import java.util.List;
 * @author Gerencia Desarrollo de Soluciones Tecnologicas
 */
 @Entity
-@Table(name = "grupos")
+@Table( name = "grupos")
 @NamedQueries({
     @NamedQuery(name = "Grupos.findAll", query = "SELECT g FROM Grupo g")})
 public class Grupo implements Serializable {

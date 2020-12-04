@@ -13,7 +13,7 @@ import java.io.Serializable;
 * @author Gerencia Desarrollo de Soluciones Tecnologicas
 */
 @Entity
-@Table(name = "lineas_vehiculos" )
+@Table( name = "lineas_vehiculos" )
 @NamedQueries({
     @NamedQuery(name = "LineaVehiculo.findAll", query = "SELECT l FROM LineaVehiculo l"),
     @NamedQuery(name = "LineaVehiculo.findByCarline", query = "SELECT l FROM LineaVehiculo l WHERE l.id = :carline"),

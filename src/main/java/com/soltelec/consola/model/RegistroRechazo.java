@@ -9,7 +9,7 @@ import java.util.Date;
  * @author Gerencia TIC
  */
 @Entity
-@Table(name = "registro_rechazo")
+@Table( name = "registro_rechazo")
 @NamedQueries({
     @NamedQuery(name = "RegistroRechazo.findAll", query = "SELECT r FROM RegistroRechazo  r"),
     @NamedQuery(name = "RegistroRechazo.FindByDate", query = "SELECT r FROM RegistroRechazo r  WHERE  r.fechaRegistro BETWEEN  :fechaRegistroIni and :fechaRegistroFin ")

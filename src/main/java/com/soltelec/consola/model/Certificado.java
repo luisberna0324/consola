@@ -13,7 +13,7 @@ import java.util.Date;
 * @author Gerencia Desarrollo de Soluciones Tecnologicas
 */
 @Entity
-@Table(name = "certificados")
+@Table( name = "certificados")
 public class Certificado implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
