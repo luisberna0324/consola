@@ -24,7 +24,7 @@ public class Usuario implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.TABLE, generator = "tabla_sequences")
-	@TableGenerator(name = "tabla_sequences", table = "generator_table", pkColumnName = "key", valueColumnName = "next", pkColumnValue = "usuario", allocationSize = 50)
+	@TableGenerator(name = "tabla_sequences", table = "generator_table", pkColumnName = "llave", valueColumnName = "next", pkColumnValue = "usuario", allocationSize = 50)
 	@Column(name = "GEUSER")
 	private Integer usuario;
 	@Basic(optional = false)
@@ -43,8 +43,8 @@ public class Usuario implements Serializable {
 	@Column(name = "contrasenia")
 	private String contrasena;
 	@Lob
-	@Type(type = "org.hibernate.type.BinaryType")
-	@Column(name = "firma_usuario", columnDefinition = "bytea")
+	//@Type(type = "org.hibernate.type.BinaryType")
+	@Column(name = "firma_usuario")
 	private byte[] firmaUsuario;
 
 	public Usuario() {

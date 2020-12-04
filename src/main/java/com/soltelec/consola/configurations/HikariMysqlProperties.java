@@ -10,8 +10,8 @@ import org.springframework.context.annotation.PropertySource;
 @Getter
 @Configuration
 @PropertySource("classpath:application.yml")
-@ConfigurationProperties("spring.datasource-write.hikari")
-public class HikariWriteProperties {
+@ConfigurationProperties("spring.datasource-mysql.hikari")
+public class HikariMysqlProperties {
 
     private String poolName;
 

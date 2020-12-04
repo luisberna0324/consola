@@ -20,16 +20,16 @@ import static com.soltelec.consola.DemoApplication.MODEL_PACKAGE;
  * @author Jay Ehsaniara, Dec 30 2019
  */
 @Configuration
-@ConfigurationProperties("spring.datasource-read")
+@ConfigurationProperties("spring.datasource-postgres")
 @EnableTransactionManagement
 @EnableJpaRepositories(
         entityManagerFactoryRef = "entityManagerFactoryRead",
-        transactionManagerRef = "transactionManagerRead",
-        basePackages = {"com.soltelec.consola.repository.readRepository"}
+        transactionManagerRef = "transactionManagerRead"
+        //,basePackages = {"com.soltelec.consola.repository.readRepository"}
 )
-public class DataSourceConfigRead extends HikariConfigRead {
+public class DataSourceConfigPostgres extends HikariConfigRead {
 
-    public DataSourceConfigRead(HikariReadProperties hikariReadProperties) {
+    public DataSourceConfigPostgres(HikariReadProperties hikariReadProperties) {
         super(hikariReadProperties);
     }
 
@@ -51,21 +51,8 @@ public class DataSourceConfigRead extends HikariConfigRead {
         }};
     }
 
-    @Bean(name = "readingEntityManagerFactory")
-    public EntityManagerFactory readingEntityManagerFactory() {
-        LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
-        em.setPersistenceUnitName("persistence.postgres");
-        em.setDataSource(dataSourceRead());
-        em.setPackagesToScan("com.soltelec.consola.model");
-        em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
-        em.afterPropertiesSet();
-        return em.getObject();
-    }
-
     @Bean
     public PlatformTransactionManager transactionManagerRead(EntityManagerFactory entityManagerFactoryRead) {
-        JpaTransactionManager transactionManager = new JpaTransactionManager();
-        transactionManager.setEntityManagerFactory(readingEntityManagerFactory());
-        return transactionManager;
+        return new JpaTransactionManager(entityManagerFactoryRead);
     }
 }

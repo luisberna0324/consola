@@ -8,7 +8,7 @@ public class HikariConfigRead extends HikariConfig {
 
     protected final HikariReadProperties hikariReadProperties;
 
-    protected final String PERSISTENCE_UNIT_NAME = "read";
+    protected final String PERSISTENCE_UNIT_NAME = "persistence.postgres";
 
     protected final Properties JPA_READ_PROPERTIES = new Properties() {{
         put("hibernate.dialect", "org.hibernate.dialect.PostgreSQL10Dialect");

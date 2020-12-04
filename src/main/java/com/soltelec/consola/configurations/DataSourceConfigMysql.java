@@ -20,16 +20,16 @@ import static com.soltelec.consola.DemoApplication.MODEL_PACKAGE;
  * @author Jay Ehsaniara, Dec 30 2019
  */
 @Configuration
-@ConfigurationProperties("spring.datasource-write")
+@ConfigurationProperties("spring.datasource-mysql")
 @EnableTransactionManagement
 @EnableJpaRepositories(
         entityManagerFactoryRef = "entityManagerFactoryWrite",
-        transactionManagerRef = "transactionManagerWrite",
-        basePackages = {"com.soltelec.consola.repository.writeRepository"}
+        transactionManagerRef = "transactionManagerWrite"
+        //,basePackages = {"com.soltelec.consola.repository.writeRepository"}
 )
-public class DataSourceConfigWrite extends HikariConfigWrite {
+public class DataSourceConfigMysql extends HikariConfigWrite {
 
-    public DataSourceConfigWrite(HikariWriteProperties hikariWriteProperties) {
+    public DataSourceConfigMysql(HikariMysqlProperties hikariWriteProperties) {
         super(hikariWriteProperties);
     }
 
@@ -49,17 +49,6 @@ public class DataSourceConfigWrite extends HikariConfigWrite {
             setPackagesToScan(MODEL_PACKAGE);
             setJpaProperties(JPA_WRITE_PROPERTIES);
         }};
-    }
-
-    @Bean(name = "writeEntityManagerFactory")
-    public EntityManagerFactory readingEntityManagerFactory() {
-        LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
-        em.setPersistenceUnitName("persistence.mysql");
-        em.setDataSource(dataSourceWrite());
-        em.setPackagesToScan("com.soltelec.consola.model");
-        em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
-        em.afterPropertiesSet();
-        return em.getObject();
     }
 
     @Bean

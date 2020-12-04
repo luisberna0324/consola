@@ -22,7 +22,7 @@ public class RegNovedades implements Serializable {
     @TableGenerator(
 		    name="sequence_novedades",
 		    table="generator_table",
-		    pkColumnName = "key",
+		    pkColumnName = "llave",
 		    valueColumnName = "next",
 		    pkColumnValue="reg_novedades",
 		    allocationSize=50
@@ -42,8 +42,8 @@ public class RegNovedades implements Serializable {
     @Column(name = "fk_pre_revision")
     private Integer fkPreRevision;    
     @Lob
-    @Type(type="org.hibernate.type.BinaryType")
-    @Column(name = "reg_evidencia", columnDefinition="bytea")
+    //@Type(type="org.hibernate.type.BinaryType")
+    @Column(name = "reg_evidencia")
     private byte[] regEvidencia; 
         
     public RegNovedades() {

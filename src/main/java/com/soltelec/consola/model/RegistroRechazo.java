@@ -21,7 +21,7 @@ public class RegistroRechazo implements Serializable {
     @TableGenerator(
 		    name="sequence_rechazo",
 		    table="generator_table",
-		    pkColumnName = "key",
+		    pkColumnName = "llave",
 		    valueColumnName = "next",
 		    pkColumnValue="reg_rechazo",
 		    allocationSize=50

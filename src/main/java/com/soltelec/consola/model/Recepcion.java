@@ -19,7 +19,7 @@ public class Recepcion implements Serializable {
     @TableGenerator(
 		    name="sequence_recepcion",
 		    table="generator_table",
-		    pkColumnName = "key",
+		    pkColumnName = "llave",
 		    valueColumnName = "next",
 		    pkColumnValue="recepcion",
 		    allocationSize=5

@@ -10,7 +10,7 @@ import org.springframework.context.annotation.PropertySource;
 @Getter
 @Configuration
 @PropertySource("classpath:application.yml")
-@ConfigurationProperties("spring.datasource-read.hikari")
+@ConfigurationProperties("spring.datasource-postgres.hikari")
 public class HikariReadProperties {
 
     private String poolName;

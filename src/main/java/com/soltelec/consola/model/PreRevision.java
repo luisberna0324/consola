@@ -26,7 +26,7 @@ public class PreRevision implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.TABLE, generator = "sequence_revision")
-	@TableGenerator(name = "sequence_revision", table = "generator_table", pkColumnName = "key", valueColumnName = "next", pkColumnValue = "pre_revision", allocationSize = 5)
+	@TableGenerator(name = "sequence_revision", table = "generator_table", pkColumnName = "llave", valueColumnName = "next", pkColumnValue = "pre_revision", allocationSize = 5)
 	@Column(name = "no_revision")
 	private Integer noRevision;
 	@Basic(optional = true)
@@ -208,8 +208,8 @@ public class PreRevision implements Serializable {
 	@Column(name = "primera_vez", nullable = true)
 	private Integer primeraVez;
 	@Lob
-	@Type(type = "org.hibernate.type.BinaryType")
-	@Column(name = "firma_revision", columnDefinition = "bytea")
+	//@Type(type = "org.hibernate.type.BinaryType")
+	@Column(name = "firma_revision")
 	private byte[] firmaRevision;
 	
 	
